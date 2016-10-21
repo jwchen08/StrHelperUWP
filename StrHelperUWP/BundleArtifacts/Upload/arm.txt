@@ -1,0 +1,6 @@
+MainPackage=C:\Users\jwchen08\documents\visual studio 2015\Projects\StrHelperUWP\StrHelperUWP\bin\ARM\Release\Upload\StrHelperUWP_1.6.0.0_ARM.appx
+SymbolPackage=C:\Users\jwchen08\documents\visual studio 2015\Projects\StrHelperUWP\StrHelperUWP\AppPackages\StrHelperUWP_1.6.0.0\StrHelperUWP_1.6.0.0_ARM.appxsym
+ResourcePack=C:\Users\jwchen08\documents\visual studio 2015\Projects\StrHelperUWP\StrHelperUWP\_scale-100.appx
+ResourcePack=C:\Users\jwchen08\documents\visual studio 2015\Projects\StrHelperUWP\StrHelperUWP\_scale-125.appx
+ResourcePack=C:\Users\jwchen08\documents\visual studio 2015\Projects\StrHelperUWP\StrHelperUWP\_scale-150.appx
+ResourcePack=C:\Users\jwchen08\documents\visual studio 2015\Projects\StrHelperUWP\StrHelperUWP\_scale-400.appx

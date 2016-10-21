@@ -1,0 +1,43 @@
+﻿<UserControl
+    x:Class="StrHelperUWP.RebarPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StrHelperUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="400"
+    d:DesignWidth="600">
+
+    <Grid x:Name="RebarGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" MinWidth="60"/>
+            <ColumnDefinition Width="*" MinWidth="60"/>
+            <ColumnDefinition Width="*" MinWidth="60"/>
+            <ColumnDefinition Width="*" MinWidth="60"/>
+            <ColumnDefinition Width="*" MinWidth="60"/>
+            <ColumnDefinition Width="*" MinWidth="60"/>
+            <ColumnDefinition Width="*" MinWidth="60"/>
+            <ColumnDefinition Width="*" MinWidth="60"/>
+            <ColumnDefinition Width="*" MinWidth="60"/>
+            <ColumnDefinition Width="*" MinWidth="60"/>
+            <ColumnDefinition Width="*" MinWidth="60"/>
+            <ColumnDefinition Width="*" MinWidth="60"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Height="30"  Content="直径" VerticalAlignment="Stretch" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="Black"/>
+        <Button Grid.Row="0" Grid.Column="1" Height="30"  Content="1根" VerticalAlignment="Stretch" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="Black"/>
+        <Button Grid.Row="0" Grid.Column="2" Height="30"  Content="2根" VerticalAlignment="Stretch" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="Black"/>
+        <Button Grid.Row="0" Grid.Column="3" Height="30"  Content="3根" VerticalAlignment="Stretch" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="Black"/>
+        <Button Grid.Row="0" Grid.Column="4" Height="30"  Content="4根" VerticalAlignment="Stretch" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="Black"/>
+        <Button Grid.Row="0" Grid.Column="5" Height="30"  Content="5根" VerticalAlignment="Stretch" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="Black"/>
+        <Button Grid.Row="0" Grid.Column="6" Height="30"  Content="6根" VerticalAlignment="Stretch" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="Black"/>
+        <Button Grid.Row="0" Grid.Column="7" Height="30"  Content="7根" VerticalAlignment="Stretch" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="Black"/>
+        <Button Grid.Row="0" Grid.Column="8" Height="30"  Content="8根" VerticalAlignment="Stretch" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="Black"/>
+        <Button Grid.Row="0" Grid.Column="9" Height="30"  Content="9根" VerticalAlignment="Stretch" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="Black"/>
+        <Button Grid.Row="0" Grid.Column="10" Height="30"  Content="10根" VerticalAlignment="Stretch" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="Black"/>
+        <Button Grid.Row="0" Grid.Column="11" Height="30"  Content="直径" VerticalAlignment="Stretch" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="Black"/>
+    </Grid>
+</UserControl>

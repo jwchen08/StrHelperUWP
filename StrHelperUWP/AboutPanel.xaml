@@ -1,0 +1,128 @@
+﻿<UserControl
+    x:Class="StrHelperUWP.AboutPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StrHelperUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="600"
+    d:DesignWidth="400">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel 包含应用程序的名称和页标题-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,0,0,0">
+            <TextBlock x:Name="PageTitle" Text="关于结构小助手" Margin="0,0,0,0"  FontSize="24" Foreground="Black"/>
+        </StackPanel>
+
+        <!--ContentPanel - 在此处放置其他内容-->
+        <ScrollViewer Grid.Row="1" Margin="0,20,0,0">
+            <StackPanel x:Name="ContentPanel" Margin="0,0,0,0">
+                <Rectangle Height="150" Width="150">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="DeepSkyBlue"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Image Height="150" Width="150" Source="/Pictures/Logo.png" Stretch="UniformToFill" Margin="0,-150,0,0" HorizontalAlignment="Center"/>
+                <TextBlock TextWrapping="Wrap" Text="版本v1.6.0" HorizontalAlignment="Center" Foreground="Black"/>
+                <Rectangle Margin="0,20,0,0" Height="30">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="LightGray"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="20,-30,0,0" Foreground="Black">
+                    <Run Text="说明："/>
+                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="0,0,0,0" Foreground="Black"><Run Text="结构小助手是个专为结构工程师设计的混凝土结构设计小软件，主要功能为提供配筋计算及最小配筋率验算，功能的完善及增加将在以后的版本更新中慢慢"/><Run Text="进行"/><Run Text="，希望能给结构工程师提供小小的帮助。"/><LineBreak/></TextBlock>
+
+                <Rectangle Margin="0,0,0,0" Height="30">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="LightGray"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="20,-30,0,0" Foreground="Black">
+                    <Run Text="v1.6更新："/>
+                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="0,0,0,0" Foreground="Black">
+                    <Run Text="1.全新UWP架构！适配Windows 10！"/><LineBreak/>
+                    <Run Text="2.全新推出桌面版，工作使用方便！"/><LineBreak/>
+                </TextBlock>
+                
+                <Rectangle Margin="0,0,0,0" Height="30">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="LightGray"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="20,-30,0,0" Foreground="Black">
+                    <Run Text="v1.5更新："/>
+                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="0,0,0,0" Foreground="Black">
+                    <Run Text="1.增加抗震设计规范模块！"/><LineBreak/>
+                    <Run Text="2.全面美化主界面！"/><LineBreak/>
+                </TextBlock>
+
+                <Rectangle Margin="0,0,0,0" Height="30">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="LightGray"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="20,-30,0,0" Foreground="Black">
+                    <Run Text="v1.4更新："/>
+                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="0,0,0,0" Foreground="Black">
+                    <Run Text="1.增加截面特性计算模块！"/><LineBreak/>
+                    <Run Text="2.调整主界面配色。"/><LineBreak/>
+                </TextBlock>
+
+                <Rectangle Margin="0,0,0,0" Height="30">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="LightGray"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="20,-30,0,0" Foreground="Black">
+                    <Run Text="v1.3更新："/>
+                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="0,0,0,0" Foreground="Black">
+                    <Run Text="1.更改主页布局，更美观更带感！"/><LineBreak/>
+                    <Run Text="2.增加大磁贴。"/><LineBreak/>
+                    <Run Text="3.增加快速恢复特性。"/><LineBreak/>
+                    <Run Text="4.增加启动协议，方便第三方桌面美化程序启动结构小助手。"/><LineBreak/>
+                </TextBlock>
+
+                <Rectangle Margin="0,0,0,0" Height="30">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="LightGray"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="20,-30,0,0" Foreground="Black">
+                    <Run Text="v1.2更新："/>
+                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="0,0,0,0" Foreground="Black">
+                    <Run Text="1.全面适配Windows Phone 8。"/><LineBreak/>
+                    <Run Text="2.增加常用设计参数模块。"/><LineBreak/>
+                </TextBlock>
+
+                <Rectangle Margin="0,0,0,0" Height="30">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="LightGray"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="20,-30,0,0" Foreground="Black">
+                    <Run Text="v1.1更新："/>
+                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="0,0,0,0" Foreground="Black">
+                    <Run Text="1.更正钢筋直径的错误，现在的钢筋直径与新规范匹配。"/><LineBreak/>
+                    <LineBreak/>
+                </TextBlock>
+                <Button x:Name="FeedbackButton" Margin="0,10" HorizontalAlignment="Center" Content="反馈" Click="FeedbackButton_Click"/>
+            </StackPanel>
+            
+        </ScrollViewer>
+    </Grid>
+    
+</UserControl>

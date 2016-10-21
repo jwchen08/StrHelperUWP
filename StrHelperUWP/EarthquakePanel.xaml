@@ -1,0 +1,202 @@
+﻿<UserControl
+    x:Class="StrHelperUWP.EarthquakePanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StrHelperUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <DataTemplate x:Key="DataTemplate1">
+            <Grid>
+                <StackPanel Height="50" VerticalAlignment="Top" Orientation="Horizontal" Margin="-12,0,0,0">
+                    <Rectangle Stroke="#FF44AE4E" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                    <Rectangle Fill="#FF44AE4E" Width="10"/>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Liedu}" Margin="32,0,0,0" Width="120" VerticalAlignment="Center"/>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Acc}" Width="120" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="DataTemplate2">
+            <Grid>
+                <StackPanel Height="50" VerticalAlignment="Top" Orientation="Horizontal"  Margin="-12,0,0,0">
+                    <Rectangle Stroke="#FF44AE4E" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                    <Rectangle Fill="#FF44AE4E" Width="10"/>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Liedu}" Margin="32,0,0,0" Width="100" VerticalAlignment="Center"/>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Duoyu}" Width="100" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Hanyu}" Width="100" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="DataTemplate3">
+            <Grid>
+                <StackPanel Height="50" VerticalAlignment="Top" Orientation="Horizontal"  Margin="-12,0,0,0">
+                    <Rectangle Stroke="#FF44AE4E" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                    <Rectangle Fill="#FF44AE4E" Width="10"/>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding GroupNO}" Margin="10,0,0,0" Width="60" VerticalAlignment="Center"/>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Period1}" Width="60" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Period2}" Width="60" VerticalAlignment="Center"/>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Period3}" Width="55" VerticalAlignment="Center"/>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Period4}" Width="55" VerticalAlignment="Center"/>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Period5}" Width="55" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="DataTemplate4">
+            <Grid>
+                <StackPanel Height="50"  VerticalAlignment="Top" Orientation="Horizontal"  Margin="-12,0,0,0">
+                    <Rectangle Stroke="#FF44AE4E" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                    <Rectangle Fill="#FF44AE4E" Width="10"/>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Type}" Margin="10,0,0,0" Width="250" VerticalAlignment="Center"/>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Limit}" Width="100" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Pivot HorizontalAlignment="Stretch" Title="抗震设计参数" VerticalAlignment="Stretch" Foreground="Black">
+            <PivotItem Margin="0" CacheMode="{x:Null}" Header="设防烈度">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Height="40" VerticalAlignment="Top" Orientation="Horizontal">
+                        <Rectangle Stroke="#FFFF7400" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                        <Rectangle Fill="#FFFF7400" Width="20"/>
+                        <TextBlock TextWrapping="Wrap" Text="抗震设防烈度和设计基本地震加速度值对应关系" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Height="50" VerticalAlignment="Top" Orientation="Horizontal">
+                        <Rectangle Stroke="#FFFF7400" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                        <Rectangle Fill="#FFFF7400" Width="10"/>
+                        <TextBlock TextWrapping="Wrap" Text="设防烈度" Margin="20,0,0,0" Width="120" VerticalAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="基本加速度" Width="120" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <ListBox Grid.Row="2" x:Name="LieduListBox" ItemTemplate="{StaticResource DataTemplate1}" VerticalAlignment="Stretch"/>
+                </Grid>
+            </PivotItem>
+
+            <PivotItem Margin="0" CacheMode="{x:Null}" Header="地震影响系数">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Height="40" VerticalAlignment="Top" Orientation="Horizontal">
+                        <Rectangle Stroke="#FFFF7400" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                        <Rectangle Fill="#FFFF7400" Width="20"/>
+                        <TextBlock TextWrapping="Wrap" Text="水平地震影响系数最大值（α max）" Margin="10,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Height="50" VerticalAlignment="Top" Orientation="Horizontal">
+                        <Rectangle Stroke="#FFFF7400" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                        <Rectangle Fill="#FFFF7400" Width="10"/>
+                        <TextBlock TextWrapping="Wrap" Text="地震影响" Margin="20,0,0,0" Width="100" VerticalAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="多遇地震" Width="100" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                        <TextBlock TextWrapping="Wrap" Text="罕遇地震" Width="100" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <ListBox Grid.Row="2" x:Name="EffectIndexListBox" ItemTemplate="{StaticResource DataTemplate2}" VerticalAlignment="Stretch"/>
+                </Grid>
+            </PivotItem>
+
+            <PivotItem Margin="0" CacheMode="{x:Null}" Header="特征周期">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Height="40" VerticalAlignment="Top" Orientation="Horizontal">
+                        <Rectangle Stroke="#FFFF7400" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                        <Rectangle Fill="#FFFF7400" Width="20"/>
+                        <TextBlock TextWrapping="Wrap" Text="场地特征周期值（s）" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Height="50" VerticalAlignment="Top" Orientation="Horizontal">
+                        <Rectangle Stroke="#FFFF7400" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                        <Rectangle Fill="#FFFF7400" Width="10"/>
+                        <TextBlock TextWrapping="Wrap" Text="设计分组" Margin=" 10,0,0,0" Width="60" VerticalAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="Ⅰ(0)" Width="60" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                        <TextBlock TextWrapping="Wrap" Text="Ⅰ(1)" Width="60" VerticalAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="Ⅱ" Width="60" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                        <TextBlock TextWrapping="Wrap" Text="Ⅲ" Width="60" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                        <TextBlock TextWrapping="Wrap" Text="Ⅳ" Width="60" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                    </StackPanel>
+                    <ListBox Grid.Row="2" x:Name="EigenPeriodListBox" ItemTemplate="{StaticResource DataTemplate3}" VerticalAlignment="Stretch"/>
+                </Grid>
+            </PivotItem>
+
+            <PivotItem Margin="0" CacheMode="{x:Null}" Header="加速度时程">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Height="40" VerticalAlignment="Top" Orientation="Horizontal">
+                        <Rectangle Stroke="#FFFF7400" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                        <Rectangle Fill="#FFFF7400" Width="20"/>
+                        <TextBlock TextWrapping="Wrap" Text="时程分析所用地震加速度时程最大值（cm/s^2）" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Height="50" VerticalAlignment="Top" Orientation="Horizontal">
+                        <Rectangle Stroke="#FFFF7400" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                        <Rectangle Fill="#FFFF7400" Width="10"/>
+                        <TextBlock TextWrapping="Wrap" Text="地震影响" Margin="20,0,0,0" Width="100" VerticalAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="多遇地震" Width="100" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                        <TextBlock TextWrapping="Wrap" Text="罕遇地震" Width="100" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <ListBox Grid.Row="2" x:Name="JsdShichengListBox" ItemTemplate="{StaticResource DataTemplate2}" VerticalAlignment="Stretch"/>
+                </Grid>
+            </PivotItem>
+
+            <PivotItem Margin="0" CacheMode="{x:Null}" Header="弹性位移角">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Height="40" VerticalAlignment="Top" Orientation="Horizontal">
+                        <Rectangle Stroke="#FFFF7400" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                        <Rectangle Fill="#FFFF7400" Width="20"/>
+                        <TextBlock TextWrapping="Wrap" Text="弹性层间位移角限值" HorizontalAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Height="50" VerticalAlignment="Top" Orientation="Horizontal">
+                        <Rectangle Stroke="#FFFF7400" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                        <Rectangle Fill="#FFFF7400" Width="10"/>
+                        <TextBlock TextWrapping="Wrap" Text="结构类型" Margin="30,0,0,0" Width="200" VerticalAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="位移角限值" Width="100" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <ListBox Grid.Row="2" x:Name="ElasticWyjListBox" ItemTemplate="{StaticResource DataTemplate4}" VerticalAlignment="Stretch"/>
+                </Grid>
+            </PivotItem>
+
+            <PivotItem Margin="0" CacheMode="{x:Null}" Header="塑性位移角">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Height="40" VerticalAlignment="Top" Orientation="Horizontal">
+                        <Rectangle Stroke="#FFFF7400" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                        <Rectangle Fill="#FFFF7400" Width="20"/>
+                        <TextBlock TextWrapping="Wrap" Text="弹塑性层间位移角限值" Margin="10,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Height="50" VerticalAlignment="Top" Orientation="Horizontal">
+                        <Rectangle Stroke="#FFFF7400" Canvas.ZIndex="-1" Margin="0,0,-347,0" Width="348"/>
+                        <Rectangle Fill="#FFFF7400" Width="10"/>
+                        <TextBlock TextWrapping="Wrap" Text="结构类型" Margin="30,0,0,0" Width="200" VerticalAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="位移角限值" Width="100" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <ListBox Grid.Row="2" x:Name="PlasticWyjListBox" ItemTemplate="{StaticResource DataTemplate4}" VerticalAlignment="Stretch"/>
+                </Grid>
+            </PivotItem>
+
+
+        </Pivot>
+
+    </Grid>
+</UserControl>

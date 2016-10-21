@@ -1,0 +1,2 @@
+MainPackage=C:\Users\jwchen08\documents\visual studio 2015\Projects\StrHelperUWP\StrHelperUWP\bin\x64\Release\Upload\StrHelperUWP_1.6.0.0_x64.appx
+SymbolPackage=C:\Users\jwchen08\documents\visual studio 2015\Projects\StrHelperUWP\StrHelperUWP\AppPackages\StrHelperUWP_1.6.0.0\StrHelperUWP_1.6.0.0_x64.appxsym
