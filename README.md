@@ -1,0 +1,2 @@
+# StrHelperUWP
+A UWP project
